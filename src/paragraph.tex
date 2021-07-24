@@ -1,0 +1,6 @@
+\newcounter{paragraphNumber}
+
+\newcommand{\svsrParagraph}[1]{%
+    \stepcounter{paragraphNumber}
+    \paragraph{(\Roman{paragraphNumber}) #1}%
+}
