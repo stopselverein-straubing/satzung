@@ -1,7 +1,15 @@
 \newcounter{paragraphNumber}
+\newcounter{paragraphSubCounter}
 
 \newcommand{\svsrParagraph}[1]{%
     \stepcounter{paragraphNumber}
+    \setcounter{paragraphSubCounter}{0}
 
     \paragraph{(\arabic{paragraphNumber}) #1}%
+}
+
+\newcommand{\svsrSubParagraph}[1]{%
+    \stepcounter{paragraphSubCounter}
+
+    \paragraph{(\arabic{paragraphNumber}\alph{paragraphSubCounter}) #1}%
 }
